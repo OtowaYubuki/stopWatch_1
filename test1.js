@@ -3,14 +3,14 @@ let start = document.getElementById("start");
 let stop = document.getElementById("stop");
 let reset = document.getElementById("reset");
 
-let hours_1 = 0;
-let hours_2 = 0;
-let minutes_1 = 0;
-let minutes_2 = 0;
-let seconds_1 = 0;
-let seconds_2 = 0;
-let m_seconds_1 = 0;
-let m_seconds_2 = 0;
+let hours_1 = "0";
+let hours_2 = "0";
+let minutes_1 = "0";
+let minutes_2 = "0";
+let seconds_1 = "0";
+let seconds_2 = "0";
+let m_seconds_1 = "0";
+let m_seconds_2 = "0";
 
 let interval;
 
@@ -46,6 +46,15 @@ if(hours_2 > 9){
 }
 timer.innerHTML = hours_1 + hours_2 + ":" + minutes_1 + minutes_2 + ":" + seconds_1 + seconds_2 + ":" + m_seconds_1 + m_seconds_2;
 }
+
+/* global a*/
+/* global b*/
+
+a = 0 + 0
+console.log(a)
+b = "0" + "0"
+console.log(b)
+
 
 
 start.addEventListener("click",function(){
