@@ -14,6 +14,9 @@ let m_seconds_2 = "0";
 
 let interval;
 
+stop.disabled = true;
+reset.disabled = true;
+
 function stopWatch(){
  m_seconds_2++;
 if(m_seconds_2> 9){
@@ -47,39 +50,34 @@ if(hours_2 > 9){
 timer.innerHTML = hours_1 + hours_2 + ":" + minutes_1 + minutes_2 + ":" + seconds_1 + seconds_2 + ":" + m_seconds_1 + m_seconds_2;
 }
 
-/* global a*/
-/* global b*/
-
-a = 0 + 0
-console.log(a)
-b = "0" + "0"
-console.log(b)
-
 
 
 start.addEventListener("click",function(){
-interval = setInterval(stopWatch,1);
+interval = setInterval(stopWatch,15);
 start.disabled = true;
+stop.disabled = false;
+reset.disabled = false;
 })
 
 stop.addEventListener("click",function(){
 clearInterval(interval);
 stop.disabled = true;
 start.disabled = false;
+reset.disabled = false;
 })
     
 reset.addEventListener("click",function(){
     clearInterval(interval);
     timer.innerHTML = "00:00:00:00";
-     hours_1 = 0;
-     hours_2 = 0;
-     minutes_1 = 0;
-     minutes_2 = 0;
-     seconds_1 = 0;
-     seconds_2 = 0;
-     m_seconds_1 = 0;
-     m_seconds_2 = 0;
-    stop.disabled = false;
+     hours_1 = "0";
+     hours_2 = "0";
+     minutes_1 = "0";
+     minutes_2 = "0";
+     seconds_1 = "0";
+     seconds_2 = "0";
+     m_seconds_1 = "0";
+     m_seconds_2 = "0";
+    stop.disabled = true;
     start.disabled = false;
 })
 
