@@ -23,7 +23,7 @@ if(m_seconds_2> 9){
     m_seconds_1++;
     m_seconds_2 = 0;
 }
-if(m_seconds_1 > 5){
+if(m_seconds_1 > 9){
     seconds_2++; 
     m_seconds_1 = 0;
 }    
@@ -53,7 +53,7 @@ timer.innerHTML = hours_1 + hours_2 + ":" + minutes_1 + minutes_2 + ":" + second
 
 
 start.addEventListener("click",function(){
-interval = setInterval(stopWatch,15);
+interval = setInterval(stopWatch,10);
 start.disabled = true;
 stop.disabled = false;
 reset.disabled = false;
